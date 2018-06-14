@@ -3,7 +3,6 @@
 //  CheckoutOtpelf
 //
 //  Created by N.A Shashank on 29/05/18.
-//  Copyright © 2018 Razorpay. All rights reserved.
 //
 
 import UIKit
