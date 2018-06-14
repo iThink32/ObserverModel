@@ -2,7 +2,7 @@
 
 ## What is this ?
 
-In iOS , ther is no native way to find out whether an instance already has a similar observer before adding it or whether there exists an observer bounded to the instance before we remove it.
+In iOS , there is no native way to find out whether an instance already has a similar observer before adding it or whether there exists an observer bounded to the instance before we remove it.
 In the former it leads to memory leaks as the instance will not be deallocated and in the later it will crash the application as the instance must have registered an observer before you try to remove it.
 
 This class is extrememly simple to use and solves this problem.
