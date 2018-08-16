@@ -12,7 +12,7 @@ struct ObserverModel {
     var dictObservers = [String:Any]()
     
     @discardableResult mutating func addObserver(name:String,observer:Any,selector:Selector,object:Any?) -> Bool {
-        guard let _ = self.dictObservers[name] as? String else{
+        guard let _ = self.dictObservers[name] as? Bool else{
             NotificationCenter.default.addObserver(observer, selector: selector, name: NSNotification.Name(rawValue: name), object: object)
             self.dictObservers[name] = true
             return true
@@ -21,7 +21,7 @@ struct ObserverModel {
     }
     
     @discardableResult mutating func removeObserver(name:String,observer:Any,object:Any?) -> Bool {
-        guard let _ = self.dictObservers[name] as? String else{
+        guard let _ = self.dictObservers[name] as? Bool else{
             return false
         }
         NotificationCenter.default.removeObserver(observer, name: NSNotification.Name(rawValue: name), object: object)
